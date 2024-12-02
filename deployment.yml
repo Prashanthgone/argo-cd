@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  annotations:
+    reloader.stakater.com/auto: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: app-container
+        image: nginx
+        env:
+        - name: WELCOME_MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: welcomeMessage
