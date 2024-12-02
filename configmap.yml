@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  welcomeMessage: "Hello, Kubernetes!"
+  welcomeMessage: "Hello, Kubernetes! 2"
