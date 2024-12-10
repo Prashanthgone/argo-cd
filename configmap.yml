@@ -4,5 +4,5 @@ metadata:
   name: app-config
   namespace: default
 data:
-  welcomeMessage: "Welcome to the updated version!"
+  welcomeMessage: "Welcome to the updated version 2!"
 
